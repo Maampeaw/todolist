@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='tod.css'>
+</head>
+<body>
+    <div class='h'>
+    <h2 class='header'>Hi Have a great day</h2>
+    </div>
+    <div class='bodycont'>
+    <div class='todo'>
+    
+    <p class='check'>
+        Complete the following tasks and tick after completion
+    </p>
+    <p class='check'>
+        <input type="checkbox" name='task1' onclick="change(this)">
+        <label for='task1'>Listen to the acapella sent by havocs</label>
+    </p>
+    <p class='check'>
+        <input type="checkbox" name='task2' onclick="change(this)">
+        <label for='task2'>Add a snir loop to the intro</label>
+    </p>
+    <p class='check'>
+        <input type="checkbox" name='task3' onclick="change(this)">
+        <label for='task3'>Listen the the track Auntie Martha by El</label>
+    </p>
+    <p class='check'>
+        <input type="checkbox" name='task4' onclick="change(this)">
+        <label for='task4'>Replicate and synth of Auntie martha to chorus</label>
+    </p>
+    <p class='check'>
+        <input type="checkbox" name='task5' onclick="change(this)">
+        <label for='task5'>Send the beat to Bosco for review</label>
+    </p>
+    <div class='bt'>
+        <button id='bt' class="bt1" disabled>Done</button>
+    </div>
+
+    <p id='demo1'><b>Nice message</b></p>
+    
+
+    </div>
+    
+        <img class='hpm' src='undraw_happy_music_g6wc.svg' alt='happy music'>
+    
+    </div>
+
+    <script>
+        function tdfunc(){
+            return 'Congratulations You made your day'
+               
+        }
+        const value = tdfunc()
+
+        
+        function change(checkChange){
+            if (checkChange.checked){
+                document.getElementById('bt').disabled = false
+            } else{
+                document.getElementById('bt').disabled = true
+            }
+        }
+
+        document.getElementById('bt').addEventListener('click', function(){
+        document.getElementById('demo1').innerHTML= value;
+        });
+    </script>
+
+</body>
+</html>
